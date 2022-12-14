@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crud App</title>
+</head>
+<body>
+    <p>
+        <h1>Add Book</h1>
+    </p>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">{{button_name}}</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crud App</title>
+</head>
+<body>
+    <div>
+        <h1>Book Detail</h1>
+        Title: {{book.title}}<br>
+        Genre: {{book.genre}}<br>
+        Page Number: {{book.page_number}}<br>
+        Author:{{book.author}}<br>
+        Year: {{book.year}}
+    </div>
+    <p>
+        <a href="{% url 'book-list'%}">go to books</a><br>
+        <a href="{% url 'book-delete' book.id %}">delete book</a>
+    </p>
+    
+</body>
+</html>
