@@ -1,35 +1,28 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Crud App</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <h1>Books</h1>
-    <table>
-        <tr>
-            <th>Título</th>
-            <th>Género</th>
-            <th>Autor</th>
-            <th>Número de Páginas</th>
-            <th>Ano</th>
-            <th></th>
-            <th></th>
-        </tr>
-        {% for book in books %}
-        <tr>
-            <td>{{book.title}}</td>
-            <td>{{book.genre}}</td>
-            <td>{{book.author}}</td>
-            <td>{{book.page_number}}</td>
-            <td>{{book.year}}</td>
-            <td><a href="{% url 'book-update' book.id %}">editar</a></td>
-            <td><a href="{% url 'book-delete' book.id %}">deletar</a></td>
-        </tr>
-        {% endfor %}
-    </table>
-    <p><a href="{% url 'book-add' %}">Adicionar Livro</a></p>
-</body>
-</html>
+{% extends 'crudapp/base.html' %}
+{% block content %}
+<h1>Books</h1>
+<table>
+    <tr>
+        <th>Título</th>
+        <th>Género</th>
+        <th>Autor</th>
+        <th>Número de Páginas</th>
+        <th>Ano</th>
+        <th></th>
+        <th></th>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td>{{book.title}}</td>
+        <td>{{book.genre}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.page_number}}</td>
+        <td>{{book.year}}</td>
+        <td><a href="{% url 'book-update' book.id %}">editar</a></td>
+        <td><a href="{% url 'book-delete' book.id %}">deletar</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<p><a href="{% url 'book-add' %}">Adicionar Livro</a></p>
 
+{% endblock %}
