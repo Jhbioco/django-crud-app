@@ -1,4 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #890606;
+}
+
+a:hover{
+    color: #f81010;
+}
+
+.container{
+    padding: 100px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 200px;
+    background: #f4f4f4;
+    color: #890606;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    list-style: none;
+}
+
+.bookForm p{
+    padding-bottom: 40px;
+}
+
+.bookForm label{
+    width: 120px;
+    display: inline-block;
+}
+
+.bookForm input{
+    width: 500px;
+    height: 30px;
+}
+
+.bookForm button{
+    padding: 15px 30px;
+    background: #890606;
+    border: 0;
+    border-radius: 50px;
+    color: #ffff;
+}
+
+.bookForm button:hover{
+    background: #f81010;
+}
+
 td, th{
     border: 1px solid #890606;
     padding: 10px 20px;
 }
+

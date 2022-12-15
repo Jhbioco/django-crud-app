@@ -1,9 +1,7 @@
 {% extends 'crudapp/base.html' %}
 {% block content %}
-<p>
-    <h1>Add Book</h1>
-</p>
-<form method="post">
+
+<form method="post" class="bookForm">
     {% csrf_token %}
     {{form.as_p}}
     <button type="submit">{{button_name}}</button>

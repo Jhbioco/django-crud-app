@@ -1,6 +1,5 @@
 {% extends 'crudapp/base.html' %}
 {% block content %}
-<h1>Books</h1>
 <table>
     <tr>
         <th>Título</th>
@@ -23,6 +22,5 @@
     </tr>
     {% endfor %}
 </table>
-<p><a href="{% url 'book-add' %}">Adicionar Livro</a></p>
 
 {% endblock %}
